@@ -49,26 +49,29 @@
       },
       "areaServed": [
         { "@type": "City", "name": "Варна" },
+        { "@type": "City", "name": "Добрич" },
+        { "@type": "City", "name": "Шумен" },
+        { "@type": "City", "name": "Балчик" },
         { "@type": "City", "name": "Девня" },
         { "@type": "City", "name": "Аксаково" },
-        { "@type": "City", "name": "Балчик" },
-        { "@type": "City", "name": "Бяла" },
-        { "@type": "City", "name": "Каварна" }
+        { "@type": "City", "name": "Каварна" },
+        { "@type": "City", "name": "Провадия" },
+        { "@type": "City", "name": "Бяла" }
       ],
       "openingHoursSpecification": [{
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
         "opens": "08:00",
-        "closes": "18:00"
+        "closes": "17:00"
       }],
+      "sameAs": [
+        "https://www.instagram.com/drilling__holes"
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Услуги",
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Диамантено пробиване на отвори в бетон" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Диамантено рязане с фугорез" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Диамантено рязане на бетон с диск" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Диамантено рязане с въжерезачка" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Отвори за климатици и термопомпи" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Отвори за ВиК инсталации" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Отвори за аспирация и вентилация" } }
@@ -88,7 +91,7 @@
           "name": "Колко струва диамантено пробиване?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Цената зависи от диаметъра, дълбочината на отвора и вида на материала (бетон, армиран бетон, тухла, камък). За точна оферта се свържете с нас по телефон или Viber – ще получите ясна цена без скрити такси."
+            "text": "Цената зависи от диаметъра (Ø20 – Ø300 мм), дълбочината на отвора и вида на материала (бетон, армиран бетон, тухла, камък). Минималната сума за ангажимент е 80 евро. За точна оферта се свържете с нас по телефон или Viber – ще получите ясна цена без скрити такси."
           }
         },
         {
@@ -104,7 +107,7 @@
           "name": "Работите ли извън Варна?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Да, работим в цяла област Варна и съседните райони – Девня, Аксаково, Балчик, Бяла, Каварна и други. При по-отдалечени обекти се договаряме индивидуално."
+            "text": "Да. Работим в радиус от около 100 км около Варна – Добрич, Шумен, Балчик, Девня, Аксаково, Каварна, Провадия, Бяла и околните села. Цените за обекти извън Варна се договарят индивидуално (включват и пътя)."
           }
         },
         {
@@ -340,6 +343,33 @@
         .contact-info a:hover { color: var(--accent-color); }
 
         .contact-row { display: flex; gap: 15px; align-items: flex-start; }
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 6px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: rgba(243, 156, 18, 0.12);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
         .contact-row i {
             color: var(--accent-color);
             font-size: 1.3rem;
@@ -948,36 +978,24 @@
     <!-- Pricing / Price List Section -->
     <section class="pricing" id="pricing">
         <h2 class="section-title">Ценоразпис на услугите</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Примерен списък на предлаганите услуги. За точна оферта се свържете с нас.</p>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 10px;">Минимална сума за ангажимент: <strong style="color: var(--accent-color);">80 евро</strong>. Цените за обекти извън Варна се договарят индивидуално.</p>
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 40px;">* При калкулиране на стойността се смята цялата дълбочина на отвора, а не само на бетона.</p>
 
         <div class="price-category">
-            <h3>1. Диамантено рязане</h3>
+            <h3>Диамантено пробиване</h3>
             <table class="price-table">
                 <thead>
                     <tr><th>Услуга</th><th style="text-align:right;">Цена</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Диамантено рязане с фугорез</td><td class="price-cell">по договаряне</td></tr>
-                    <tr><td>Диамантено рязане на бетон с диск</td><td class="price-cell">по договаряне</td></tr>
-                    <tr><td>Диамантено рязане на бетон с въжерезачка</td><td class="price-cell">по договаряне</td></tr>
+                    <tr><td>Пробиване на отвори в бетон до 200мм – Ø 44, Ø 52, Ø 62, Ø 83, Ø 102</td><td class="price-cell">20 евро</td></tr>
+                    <tr><td>Пробиване на отвори в бетон до 200мм – Ø 112, Ø 122, Ø 132</td><td class="price-cell">25 евро</td></tr>
+                    <tr><td>Пробиване на отвори в бетон до 200мм – Ø 152</td><td class="price-cell">30 евро</td></tr>
+                    <tr><td>Пробиване на отвори в бетон до 200мм – Ø 162, Ø 182</td><td class="price-cell">40 евро</td></tr>
+                    <tr><td>Пробиване на отвори в бетон над 200мм – добавка за всеки следващи 10мм</td><td class="price-cell">+1 евро / 10 мм</td></tr>
                 </tbody>
             </table>
-        </div>
-
-        <div class="price-category">
-            <h3>2. Диамантено пробиване</h3>
-            <table class="price-table">
-                <thead>
-                    <tr><th>Услуга</th><th style="text-align:right;">Цена</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Пробиване на отвори в бетон до 200мм с диаметър Ø 52 – Ø 112</td><td class="price-cell">по договаряне</td></tr>
-                    <tr><td>Пробиване на отвори в бетон до 200мм с диаметър Ø 122 – Ø 202</td><td class="price-cell">по договаряне</td></tr>
-                    <tr><td>Пробиване на отвори в бетон до 200мм с диаметър Ø 250 – Ø 400</td><td class="price-cell">по договаряне</td></tr>
-                    <tr><td>Пробиване на отвори в бетон до 200мм с диаметър Ø 450 – Ø 800</td><td class="price-cell">по договаряне</td></tr>
-                    <tr><td>Пробиване на отвори в бетон над 200мм – добавка за всеки следващи 10мм</td><td class="price-cell">по договаряне</td></tr>
-                </tbody>
-            </table>
+            <p style="text-align: right; color: var(--text-muted); font-size: 0.85rem; margin-top: 10px; font-style: italic;">Цените са без ДДС.</p>
         </div>
 
     </section>
@@ -1005,7 +1023,7 @@
             <details class="faq-item">
                 <summary>Колко струва диамантено пробиване?</summary>
                 <div class="faq-answer">
-                    Цената зависи от диаметъра, дълбочината на отвора и вида на материала (бетон, армиран бетон, тухла, камък). За точна оферта се свържете с нас по телефон или Viber – ще получите ясна цена без скрити такси.
+                    Цената зависи от диаметъра (Ø20 – Ø300 мм), дълбочината на отвора и вида на материала (бетон, армиран бетон, тухла, камък). Минималната сума за ангажимент е 80 евро. За точна оферта се свържете с нас по телефон или Viber – ще получите ясна цена без скрити такси.
                 </div>
             </details>
 
@@ -1019,7 +1037,7 @@
             <details class="faq-item">
                 <summary>Работите ли извън Варна?</summary>
                 <div class="faq-answer">
-                    Да, работим в цяла област Варна и съседните райони – Девня, Аксаково, Балчик, Бяла, Каварна и други. При по-отдалечени обекти се договаряме индивидуално.
+                    Да. Работим в радиус от около 100 км около Варна – Добрич, Шумен, Балчик, Девня, Аксаково, Каварна, Провадия, Бяла и околните села. Цените за обекти извън Варна се договарят индивидуално (включват и пътя).
                 </div>
             </details>
 
@@ -1064,6 +1082,17 @@
                     <div>
                         <h3>Viber</h3>
                         <p><a href="viber://chat?number=+359887696940">Пиши във Viber</a></p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-share-alt"></i>
+                    <div>
+                        <h3>Социални мрежи</h3>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/drilling__holes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
