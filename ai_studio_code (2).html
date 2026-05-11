@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Професионално диамантено пробиване във Варна. Отвори за климатици, ВиК и аспирация. Бърза работа, без прах и вибрации. Обадете се сега!">
+    <title>Диамантено пробиване Варна | Професионални услуги</title>
+    
+    <!-- Load Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Base Dark Theme Variables */
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent-color: #f39c12; /* Construction Yellow/Gold */
+            --viber-color: #7360f2;
+        }
+
+        /* Reset & General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        header span {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1504307651254-35680f356f12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Buttons */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-call {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        .btn-call:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .btn-viber {
+            background-color: var(--viber-color);
+            color: #fff;
+        }
+
+        .btn-viber:hover {
+            background-color: #5b48d9;
+            transform: scale(1.05);
+        }
+
+        /* Features/Trust Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 20px;
+            background-color: var(--bg-card);
+        }
+
+        .feature-box {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .feature-box i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 60px 20px;
+            background-color: var(--bg-dark);
+        }
+
+        .about-text-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .about-text-container p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .about-text-container p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-text {
+            color: var(--text-main) !important;
+            font-weight: bold;
+            font-size: 1.2rem !important;
+            text-align: center !important;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--accent-color);
+        }
+
+        .services-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .services-list li {
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .services-list i {
+            color: var(--accent-color);
+        }
+
+        /* Gallery Placeholder */
+        .gallery {
+            padding: 60px 20px;
+            background-color: var(--bg-card);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            border-radius: 5px;
+            border: 1px solid #444;
+        }
+
+        /* Core Values / Final Pitch Section */
+        .core-values {
+            padding: 60px 20px;
+            background-color: var(--bg-dark);
+        }
+
+        .core-values-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #111;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .core-values-intro {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .core-values-list {
+            list-style: none;
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .core-values-list li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #cccccc;
+            font-style: italic; /* Matched from your image */
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .core-values-list i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-style: normal;
+        }
+
+        .core-values-outro {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            color: var(--accent-color);
+            border-top: 1px solid #333;
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .btn { width: 100%; text-align: center; }
+            .features { flex-direction: column; align-items: center; }
+            .about-text-container, .core-values-container { padding: 25px 15px; }
+            .core-values-intro { font-size: 1.1rem; }
+            header h2 { font-size: 1.2rem; } /* Леко намален шрифт за мобилни устройства, за да се събере дългото име */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <h2>ДИАМАНТЕНО <span>ПРОБИВАНЕ</span> ВАРНА</h2>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Професионално Диамантено Пробиване</h1>
+        <p>Прецизно пробиване на отвори в стоманобетон, тухла и камък във Варна и региона. Бързо, безопасно и <strong>без прах</strong>!</p>
+        
+        <div class="btn-container">
+            <!-- Replace +359888123456 with his actual phone number -->
+            <a href="tel:+359888123456" class="btn btn-call"><i class="fas fa-phone-alt"></i> Обади се: 0888 123 456</a>
+            <a href="viber://chat?number=+359888123456" class="btn btn-viber"><i class="fab fa-viber"></i> Пиши във Viber</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Trust Factors -->
+    <section class="features">
+        <div class="feature-box">
+            <i class="fas fa-water"></i>
+            <h3>Без прах и мръсотия</h3>
+            <p>Използваме водно охлаждане и индустриална прахосмукачка за чист обект.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-bolt"></i>
+            <h3>Бърза реакция</h3>
+            <p>Отзоваваме се в най-кратки срокове за обекти на територията на град Варна и областта.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-tools"></i>
+            <h3>Модерна техника</h3>
+            <p>Професионални машини, гарантиращи идеално гладки и точни отвори.</p>
+        </div>
+    </section>
+
+    <!-- About Our Approach Section -->
+    <section class="about-us">
+        <div class="about-text-container">
+            <h2 class="section-title" style="margin-bottom: 30px;">Нашият подход</h2>
+            <p>Ние сме екип от специалисти, които знаят как да свършат работата без излишен шум, прах и забавяне. Работим с професионална техника за диамантено пробиване, която позволява чисти и прецизни отвори без напукване на бетона и без риск за конструкцията.</p>
+            <p>Всеки обект е различен. Затова първо изслушваме, после предлагаме най-доброто решение и действаме бързо и ефективно. Работим както в апартаменти и къщи, така и на големи строителни обекти. Независимо от задачата, подходът ни е един и същ – максимално качествено и минимално губене на време за клиента.</p>
+            <p class="highlight-text">Затова голяма част от клиентите ни идват по препоръка.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">Какво предлагаме?</h2>
+        <ul class="services-list">
+            <li><i class="fas fa-check-circle"></i> Отвори за климатици и термопомпи</li>
+            <li><i class="fas fa-check-circle"></i> Отвори за ВиК (водопровод и канализация)</li>
+            <li><i class="fas fa-check-circle"></i> Отвори за аспирация и вентилация</li>
+            <li><i class="fas fa-check-circle"></i> Отвори за газови инсталации</li>
+            <li><i class="fas fa-check-circle"></i> Пробиване през силно армиран бетон</li>
+            <li><i class="fas fa-check-circle"></i> Пробиване в тухла, камък и панел</li>
+        </ul>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2 class="section-title">Снимки от наши обекти</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">(Тук ще качим реални снимки на перфектно изрязани отвори)</p>
+        <div class="gallery-grid">
+            <div class="gallery-img">Снимка 1 (Отвор за аспирация)</div>
+            <div class="gallery-img">Снимка 2 (Пробиване на стоманобетон)</div>
+            <div class="gallery-img">Снимка 3 (Машината в действие)</div>
+            <div class="gallery-img">Снимка 4 (Чистото работно място)</div>
+        </div>
+    </section>
+
+    <!-- Core Values / Final Pitch Section -->
+    <section class="core-values">
+        <div class="core-values-container">
+            <p class="core-values-intro">Когато става въпрос за диамантено пробиване, клиентите търсят едно – сигурност, точност и бързина. Ние им го даваме.</p>
+            <ul class="core-values-list">
+                <li><i class="fas fa-check"></i> <span>Перфектно пробити отвори – без компромиси</span></li>
+                <li><i class="fas fa-check"></i> <span>Бърза реакция и спазени срокове</span></li>
+                <li><i class="fas fa-check"></i> <span>Чиста работа – без излишен прах и щети</span></li>
+                <li><i class="fas fa-check"></i> <span>Ясни цени без скрити такси</span></li>
+                <li><i class="fas fa-check"></i> <span>Коректно отношение</span></li>
+            </ul>
+            <p class="core-values-outro">Ние не просто пробиваме отвори – ние решаваме проблеми</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2 style="color: white; margin-bottom: 20px;">Готови ли сте да започнем?</h2>
+        <div class="btn-container">
+            <a href="tel:+359888123456" class="btn btn-call"><i class="fas fa-phone-alt"></i> 0888 123 456</a>
+        </div>
+        <p style="margin-top: 30px;">&copy; 2024 Диамантено Пробиване Варна. Всички права запазени.</p>
+        <p>Работно време: Понеделник - Събота (08:00 - 18:00)</p>
+    </footer>
+
+</body>
+</html>
