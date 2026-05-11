@@ -34,7 +34,47 @@
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-text-size-adjust: 100%;
+            position: relative;
         }
+
+        /* Fixed atmospheric background — works on both desktop and mobile */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: url('bg.jpg') center center / cover no-repeat;
+            opacity: 0.10;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.35) 50%, rgba(10,10,10,0.55) 100%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Make section backgrounds slightly transparent so the bg image bleeds through subtly */
+        .hero,
+        .core-values,
+        .features,
+        .about-us,
+        .services,
+        .pricing,
+        .gallery {
+            background-color: transparent;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1504307651254-35680f356f12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+
+        .about-us { background-color: rgba(5,5,5,0.7); }
 
         a, button {
             -webkit-tap-highlight-color: rgba(243, 156, 18, 0.25);
@@ -670,6 +710,9 @@
             <img src="gallery3.jpg" alt="Отвори за инсталация в тухлена стена" class="gallery-img" loading="lazy">
             <img src="gallery4.jpg" alt="Диамантена бургия в действие" class="gallery-img" loading="lazy">
             <img src="gallery5.jpg" alt="Чист отвор в бетон след пробиване" class="gallery-img" loading="lazy">
+            <img src="gallery6.jpg" alt="Серия отвори в масивна стоманобетонна стена" class="gallery-img" loading="lazy">
+            <img src="gallery7.jpg" alt="Пробити отвори в подземно помещение" class="gallery-img" loading="lazy">
+            <img src="gallery8.jpg" alt="Детайл от пробит отвор в бетон" class="gallery-img" loading="lazy">
         </div>
     </section>
 
