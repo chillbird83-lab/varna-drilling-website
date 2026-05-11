@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Професионално диамантено пробиване във Варна. Отвори за климатици, ВиК и аспирация. Бърза работа, без прах и вибрации. Обадете се сега!">
     <title>Диамантено пробиване Варна | Професионални услуги</title>
+
+    <!-- Open Graph / Facebook / Viber preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="bg_BG">
+    <meta property="og:site_name" content="Диамантено пробиване Варна">
+    <meta property="og:title" content="Диамантено пробиване Варна | Професионални услуги">
+    <meta property="og:description" content="Прецизно пробиване на отвори в стоманобетон, тухла и камък във Варна и региона. Бързо, безопасно и без прах. Обадете се: 0887 69 69 40.">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Серия прецизно пробити отвори в стоманобетонна стена">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Диамантено пробиване Варна">
+    <meta name="twitter:description" content="Прецизно пробиване във Варна и региона. Бързо, чисто, без прах. Тел: 0887 69 69 40.">
+    <meta name="twitter:image" content="og-image.jpg">
+
+    <!-- Theme color (mobile browser bar) -->
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Favicon (SVG drill icon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23f39c12' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23f39c12'/%3E%3C/svg%3E">
     
     <!-- Load Icons (FontAwesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -109,6 +132,70 @@
         }
         @media (max-width: 768px) {
             .tagline { font-size: 1.1rem; padding: 35px 18px; }
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 60px 20px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background-color: rgba(26,26,26,0.85);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 18px 22px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .faq-item summary::-webkit-details-marker { display: none; }
+
+        .faq-item summary::after {
+            content: "+";
+            color: var(--accent-color);
+            font-size: 1.6rem;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+
+        .faq-item summary:hover { color: var(--accent-color); }
+
+        .faq-answer {
+            padding: 0 22px 20px 22px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .faq { padding: 40px 15px; }
+            .faq-item summary { padding: 16px 18px; font-size: 0.98rem; }
+            .faq-answer { padding: 0 18px 16px 18px; font-size: 0.95rem; }
         }
 
         .contact-intro {
@@ -705,6 +792,7 @@
             <a href="#services">Услуги</a>
             <a href="#pricing">Ценоразпис</a>
             <a href="#gallery">Галерия</a>
+            <a href="#faq">Въпроси</a>
             <a href="#contact">Контакти</a>
         </nav>
     </header>
@@ -828,6 +916,68 @@
             <img src="gallery6.jpg" alt="Серия отвори в масивна стоманобетонна стена" class="gallery-img" loading="lazy">
             <img src="gallery7.jpg" alt="Пробити отвори в подземно помещение" class="gallery-img" loading="lazy">
             <img src="gallery8.jpg" alt="Детайл от пробит отвор в бетон" class="gallery-img" loading="lazy">
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <h2 class="section-title">Често задавани въпроси</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Колко струва диамантено пробиване?</summary>
+                <div class="faq-answer">
+                    Цената зависи от диаметъра, дълбочината на отвора и вида на материала (бетон, армиран бетон, тухла, камък). За точна оферта се свържете с нас по телефон или Viber – ще получите ясна цена без скрити такси.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Колко време отнема пробиването на един отвор?</summary>
+                <div class="faq-answer">
+                    Стандартен отвор за климатик в тухлена стена отнема около 15-20 минути. Пробиване в силно армиран бетон може да отнеме до един час. Винаги Ви информираме предварително за времетраенето.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Работите ли извън Варна?</summary>
+                <div class="faq-answer">
+                    Да, работим в цяла област Варна и съседните райони – Девня, Аксаково, Балчик, Бяла, Каварна и други. При по-отдалечени обекти се договаряме индивидуално.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Има ли прах и мръсотия при пробиването?</summary>
+                <div class="faq-answer">
+                    Не. Използваме професионално оборудване с водно охлаждане и индустриална прахосмукачка. Обектът остава чист, а пробитият материал се събира директно. Идеално за работа в обитавани жилища.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Можете ли да пробивате силно армиран бетон?</summary>
+                <div class="faq-answer">
+                    Да. Нашата техника е специално създадена за стоманобетон с тежка армировка. Диамантените корони режат и стомана, и бетон без проблем и без напукване около отвора.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Какъв е максималният диаметър и дълбочина?</summary>
+                <div class="faq-answer">
+                    Изпълняваме отвори от Ø 32 мм до Ø 800 мм и дълбочина над 1 метър при необходимост. За нестандартни размери – свържете се с нас за консултация.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Колко бързо можете да дойдете?</summary>
+                <div class="faq-answer">
+                    В повечето случаи се отзоваваме в рамките на 24-48 часа. При спешни поръчки в района на Варна можем да дойдем и в същия ден – зависи от натоварването.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Издавате ли фактура?</summary>
+                <div class="faq-answer">
+                    Да. Работим както с физически лица, така и с фирми и строителни обекти. Издаваме фактура при необходимост.
+                </div>
+            </details>
         </div>
     </section>
 
