@@ -32,6 +32,19 @@
             background-color: var(--bg-dark);
             color: var(--text-main);
             line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        a, button {
+            -webkit-tap-highlight-color: rgba(243, 156, 18, 0.25);
+        }
+
+        img { max-width: 100%; height: auto; }
+
+        @media (hover: none) {
+            .btn-call:hover, .btn-viber:hover { transform: none; }
+            .gallery-img:hover { transform: none; box-shadow: none; }
         }
 
         /* Header */
@@ -374,14 +387,18 @@
 
         .gallery-img {
             width: 100%;
-            height: 200px;
-            background-color: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
+            height: 250px;
+            object-fit: cover;
             border-radius: 5px;
             border: 1px solid #444;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
         }
 
         /* Footer */
@@ -485,9 +502,9 @@
                 white-space: normal;
             }
 
-            .gallery { padding: 40px 15px; }
-            .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-            .gallery-img { height: 130px; font-size: 0.8rem; text-align: center; padding: 5px; }
+            .gallery { padding: 40px 12px; }
+            .gallery-grid { grid-template-columns: 1fr; gap: 12px; max-width: 500px; }
+            .gallery-img { height: auto; max-height: 70vh; aspect-ratio: 3 / 4; }
 
             footer { padding: 35px 15px 90px 15px; }
             footer h2 { font-size: 1.3rem; }
@@ -646,12 +663,13 @@
     <!-- Gallery Section -->
     <section class="gallery" id="gallery">
         <h2 class="section-title">Снимки от наши обекти</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">(Тук ще качим реални снимки на перфектно изрязани отвори)</p>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Реални снимки от изпълнени проекти.</p>
         <div class="gallery-grid">
-            <div class="gallery-img">Снимка 1 (Отвор за аспирация)</div>
-            <div class="gallery-img">Снимка 2 (Пробиване на стоманобетон)</div>
-            <div class="gallery-img">Снимка 3 (Машината в действие)</div>
-            <div class="gallery-img">Снимка 4 (Чистото работно място)</div>
+            <img src="gallery1.jpg" alt="Серия отвори за вентилация в стоманобетон" class="gallery-img" loading="lazy">
+            <img src="gallery2.jpg" alt="Прецизно пробити отвори в бетонна плоча" class="gallery-img" loading="lazy">
+            <img src="gallery3.jpg" alt="Отвори за инсталация в тухлена стена" class="gallery-img" loading="lazy">
+            <img src="gallery4.jpg" alt="Диамантена бургия в действие" class="gallery-img" loading="lazy">
+            <img src="gallery5.jpg" alt="Чист отвор в бетон след пробиване" class="gallery-img" loading="lazy">
         </div>
     </section>
 
