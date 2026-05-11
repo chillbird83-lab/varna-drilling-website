@@ -28,31 +28,32 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
+        html {
             background-color: var(--bg-dark);
+        }
+
+        body {
+            background-color: transparent;
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-text-size-adjust: 100%;
-            position: relative;
         }
 
         /* Fixed atmospheric background — works on both desktop and mobile */
-        body::before {
-            content: "";
+        .bg-layer {
             position: fixed;
             inset: 0;
             background: url('bg.jpg') center center / cover no-repeat;
-            opacity: 0.10;
+            opacity: 0.45;
             z-index: -2;
             pointer-events: none;
         }
 
-        body::after {
-            content: "";
+        .bg-overlay {
             position: fixed;
             inset: 0;
-            background: linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.35) 50%, rgba(10,10,10,0.55) 100%);
+            background: linear-gradient(180deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.30) 100%);
             z-index: -1;
             pointer-events: none;
         }
@@ -71,10 +72,15 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1504307651254-35680f356f12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: transparent;
         }
 
-        .about-us { background-color: rgba(5,5,5,0.7); }
+        .about-us { background-color: rgba(5,5,5,0.55); }
+        .core-values-container { background-color: rgba(17,17,17,0.85); }
+        .feature-box { background-color: rgba(26,26,26,0.85); }
+        .about-text-container { background-color: rgba(26,26,26,0.85); }
+        .services-list li { background-color: rgba(26,26,26,0.85); }
+        .price-table { background-color: rgba(26,26,26,0.9); }
 
         a, button {
             -webkit-tap-highlight-color: rgba(243, 156, 18, 0.25);
@@ -580,6 +586,10 @@
     </style>
 </head>
 <body>
+
+    <!-- Fixed atmospheric background layers -->
+    <div class="bg-layer"></div>
+    <div class="bg-overlay"></div>
 
     <!-- Header Navigation -->
     <header>
