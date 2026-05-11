@@ -112,19 +112,81 @@
             transform: scale(1.05);
         }
 
+        /* Core Values / Final Pitch Section (Moved to top) */
+        .core-values {
+            padding: 60px 20px;
+            background-color: var(--bg-dark);
+        }
+
+        .core-values-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #111;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .core-values-intro {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .core-values-list {
+            list-style: none;
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .core-values-list li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #cccccc;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .core-values-list i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-style: normal;
+        }
+
+        .core-values-outro {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            color: var(--accent-color);
+            border-top: 1px solid #333;
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+
         /* Features/Trust Section */
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
-            padding: 60px 20px;
-            background-color: var(--bg-card);
+            padding: 20px 20px 60px 20px; /* Adjusted top padding to blend better */
+            background-color: var(--bg-dark); /* Changed to dark so it flows seamlessly */
         }
 
         .feature-box {
             text-align: center;
             max-width: 300px;
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
         }
 
         .feature-box i {
@@ -136,7 +198,7 @@
         /* About Us Section */
         .about-us {
             padding: 60px 20px;
-            background-color: var(--bg-dark);
+            background-color: #050505; /* Slightly darker background for contrast */
         }
 
         .about-text-container {
@@ -208,7 +270,7 @@
         /* Gallery Placeholder */
         .gallery {
             padding: 60px 20px;
-            background-color: var(--bg-card);
+            background-color: var(--bg-dark);
         }
 
         .gallery-grid {
@@ -231,64 +293,6 @@
             border: 1px solid #444;
         }
 
-        /* Core Values / Final Pitch Section */
-        .core-values {
-            padding: 60px 20px;
-            background-color: var(--bg-dark);
-        }
-
-        .core-values-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #111;
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-
-        .core-values-intro {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            text-align: center;
-            color: var(--text-main);
-            line-height: 1.5;
-        }
-
-        .core-values-list {
-            list-style: none;
-            margin-bottom: 30px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .core-values-list li {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #cccccc;
-            font-style: italic; /* Matched from your image */
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .core-values-list i {
-            color: var(--accent-color);
-            font-size: 1.2rem;
-            font-style: normal;
-        }
-
-        .core-values-outro {
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-align: center;
-            color: var(--accent-color);
-            border-top: 1px solid #333;
-            padding-top: 25px;
-            margin-top: 10px;
-        }
-
         /* Footer */
         footer {
             background-color: #000;
@@ -309,7 +313,7 @@
             .features { flex-direction: column; align-items: center; }
             .about-text-container, .core-values-container { padding: 25px 15px; }
             .core-values-intro { font-size: 1.1rem; }
-            header h2 { font-size: 1.2rem; } /* Леко намален шрифт за мобилни устройства, за да се събере дългото име */
+            header h2 { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -329,6 +333,21 @@
             <!-- Replace +359888123456 with his actual phone number -->
             <a href="tel:+359888123456" class="btn btn-call"><i class="fas fa-phone-alt"></i> Обади се: 0888 123 456</a>
             <a href="viber://chat?number=+359888123456" class="btn btn-viber"><i class="fab fa-viber"></i> Пиши във Viber</a>
+        </div>
+    </section>
+
+    <!-- Core Values / Pitch Section (MOVED HERE) -->
+    <section class="core-values">
+        <div class="core-values-container">
+            <p class="core-values-intro">Когато става въпрос за диамантено пробиване, клиентите търсят едно – сигурност, точност и бързина. Ние им го даваме.</p>
+            <ul class="core-values-list">
+                <li><i class="fas fa-check"></i> <span>Перфектно пробити отвори – без компромиси</span></li>
+                <li><i class="fas fa-check"></i> <span>Бърза реакция и спазени срокове</span></li>
+                <li><i class="fas fa-check"></i> <span>Чиста работа – без излишен прах и щети</span></li>
+                <li><i class="fas fa-check"></i> <span>Ясни цени без скрити такси</span></li>
+                <li><i class="fas fa-check"></i> <span>Коректно отношение</span></li>
+            </ul>
+            <p class="core-values-outro">Ние не просто пробиваме отвори – ние решаваме проблеми</p>
         </div>
     </section>
 
@@ -383,21 +402,6 @@
             <div class="gallery-img">Снимка 2 (Пробиване на стоманобетон)</div>
             <div class="gallery-img">Снимка 3 (Машината в действие)</div>
             <div class="gallery-img">Снимка 4 (Чистото работно място)</div>
-        </div>
-    </section>
-
-    <!-- Core Values / Final Pitch Section -->
-    <section class="core-values">
-        <div class="core-values-container">
-            <p class="core-values-intro">Когато става въпрос за диамантено пробиване, клиентите търсят едно – сигурност, точност и бързина. Ние им го даваме.</p>
-            <ul class="core-values-list">
-                <li><i class="fas fa-check"></i> <span>Перфектно пробити отвори – без компромиси</span></li>
-                <li><i class="fas fa-check"></i> <span>Бърза реакция и спазени срокове</span></li>
-                <li><i class="fas fa-check"></i> <span>Чиста работа – без излишен прах и щети</span></li>
-                <li><i class="fas fa-check"></i> <span>Ясни цени без скрити такси</span></li>
-                <li><i class="fas fa-check"></i> <span>Коректно отношение</span></li>
-            </ul>
-            <p class="core-values-outro">Ние не просто пробиваме отвори – ние решаваме проблеми</p>
         </div>
     </section>
 
