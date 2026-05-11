@@ -30,33 +30,45 @@
 
         html {
             background-color: var(--bg-dark);
+            overflow-x: hidden;
         }
 
         body {
             background-color: transparent;
             color: var(--text-main);
             line-height: 1.6;
-            overflow-x: hidden;
             -webkit-text-size-adjust: 100%;
         }
 
-        /* Fixed atmospheric background — works on both desktop and mobile */
+        /* Fixed atmospheric background — works on both desktop and mobile (iOS-safe) */
         .bg-layer {
             position: fixed;
-            inset: 0;
-            background: url('bg.jpg') center center / cover no-repeat;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('bg.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
             opacity: 0.20;
-            z-index: -2;
+            z-index: 0;
             pointer-events: none;
         }
 
         .bg-overlay {
             position: fixed;
-            inset: 0;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             background: linear-gradient(180deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.30) 100%);
-            z-index: -1;
+            z-index: 0;
             pointer-events: none;
         }
+
+        /* Make sure all content stacks above the bg layers */
+        header, main, footer, section, .tagline { position: relative; z-index: 1; }
 
         /* Make section backgrounds slightly transparent so the bg image bleeds through subtly */
         .hero,
