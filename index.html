@@ -67,6 +67,33 @@
       "sameAs": [
         "https://www.instagram.com/drilling__holes"
       ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "14",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Тодор Янакиев" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Изключително съм доволен от услугата по пробиване на отвор в стената! Работата беше свършена бързо, прецизно и с внимание към детайла. Човекът беше професионален и учтив, а отвора чист и точен без никакви повреди по околната повърхност."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Гергана Цекова" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Професионално отношение, бърза реакция и много качествено изпълнение. Екипът е коректен и работи на добри цени. Препоръчвам!"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Ярослав Минчев" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Много съм доволен от процеса – бързо, точно и чисто."
+        }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Услуги",
@@ -233,6 +260,153 @@
         }
         @media (max-width: 768px) {
             .tagline { font-size: 1.1rem; padding: 35px 18px; }
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .reviews-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .reviews-badge .stars {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+        }
+
+        .reviews-badge .rating-num {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .reviews-badge .rating-meta {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .testimonial-card {
+            background-color: rgba(26,26,26,0.88);
+            border-radius: 10px;
+            padding: 28px 24px;
+            border-top: 3px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: "\201C";
+            position: absolute;
+            top: 5px;
+            right: 18px;
+            font-size: 4rem;
+            color: var(--accent-color);
+            opacity: 0.25;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-stars {
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: var(--text-main);
+            font-size: 0.98rem;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 14px;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        .author-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .author-name {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .author-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .reviews-cta {
+            text-align: center;
+        }
+
+        .btn-google-reviews {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            border: 2px solid var(--accent-color);
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-google-reviews:hover {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        .btn-google-reviews i {
+            color: var(--accent-color);
+            transition: color 0.2s ease;
+        }
+
+        .btn-google-reviews:hover i { color: #000; }
+
+        @media (max-width: 768px) {
+            .testimonials { padding: 40px 15px; }
+            .testimonials-grid { grid-template-columns: 1fr; gap: 15px; }
+            .testimonial-card { padding: 22px 20px; }
+            .reviews-badge .rating-num { font-size: 1.4rem; }
         }
 
         /* FAQ Section */
@@ -745,17 +919,17 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .gallery-img {
             width: 100%;
-            height: 250px;
+            aspect-ratio: 4 / 5;
             object-fit: cover;
-            border-radius: 5px;
+            border-radius: 6px;
             border: 1px solid #444;
             display: block;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -869,8 +1043,8 @@
             }
 
             .gallery { padding: 40px 12px; }
-            .gallery-grid { grid-template-columns: 1fr; gap: 12px; max-width: 500px; }
-            .gallery-img { height: auto; max-height: 70vh; aspect-ratio: 3 / 4; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; max-width: 100%; }
+            .gallery-img { aspect-ratio: 3 / 4; }
 
             footer { padding: 35px 15px 90px 15px; }
             footer h2 { font-size: 1.3rem; }
@@ -920,6 +1094,7 @@
             <a href="#services">Услуги</a>
             <a href="#pricing">Ценоразпис</a>
             <a href="#gallery">Галерия</a>
+            <a href="#testimonials">Отзиви</a>
             <a href="#faq">Въпроси</a>
             <a href="#contact">Контакти</a>
         </nav>
@@ -1017,6 +1192,70 @@
             <img src="otvori-masivna-stena-varna.jpg" alt="Серия отвори в масивна стоманобетонна стена във Варна" class="gallery-img" loading="lazy">
             <img src="probivane-podzemno-pomeshtenie.jpg" alt="Пробити отвори в подземно помещение" class="gallery-img" loading="lazy">
             <img src="detayl-otvor-armiran-beton.jpg" alt="Детайл от пробит отвор в армиран бетон" class="gallery-img" loading="lazy">
+            <img src="otvori-keramichni-plochki-banya.jpg" alt="Отвори през керамични плочки в баня – без напукване" class="gallery-img" loading="lazy">
+            <img src="otvor-vatreshen-zid.jpg" alt="Прецизен отвор във вътрешен зид" class="gallery-img" loading="lazy">
+            <img src="otvor-tavan-tunel-stomanobeton.jpg" alt="Чист отвор през стоманобетонна таванна плоча" class="gallery-img" loading="lazy">
+            <img src="dalbok-otvor-armiran-beton-detayl.jpg" alt="Детайл от дълбок отвор в армиран бетон" class="gallery-img" loading="lazy">
+            <img src="otvor-aspirator-kuhnya-montazh.jpg" alt="Отвор за кухненски аспиратор – готов за монтаж" class="gallery-img" loading="lazy">
+            <img src="dalbok-otvor-izmerena-dalbochina.jpg" alt="Дълбок отвор с измерена дълбочина над 70 см" class="gallery-img" loading="lazy">
+            <img src="otvor-fasaden-panel-izolatsiya.jpg" alt="Отвор в фасаден панел с топлоизолация" class="gallery-img" loading="lazy">
+            <img src="otvori-stena-elektro-instalatsiya.jpg" alt="Отвори в стена за електроинсталация" class="gallery-img" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Testimonials / Reviews Section -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">Какво казват клиентите</h2>
+
+        <div class="reviews-badge">
+            <span class="rating-num">5.0</span>
+            <span class="stars">★★★★★</span>
+            <span class="rating-meta">от 14 отзива в Google</span>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Изключително съм доволен от услугата по пробиване на отвор в стената! Работата беше свършена бързо, прецизно и с внимание към детайла. Човекът беше професионален и учтив, а отвора чист и точен без никакви повреди по околната повърхност. Препоръчвам тази услуга на всеки, който търси надеждност и добро отношение към клиента!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">T</div>
+                    <div>
+                        <div class="author-name">Тодор Янакиев</div>
+                        <div class="author-date">преди 2 седмици</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Професионално отношение, бърза реакция и много качествено изпълнение. Екипът е коректен и работи на добри цени. Препоръчвам!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">G</div>
+                    <div>
+                        <div class="author-name">Гергана Цекова</div>
+                        <div class="author-date">преди 2 месеца</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Много съм доволен от процеса – бързо, точно и чисто.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">Я</div>
+                    <div>
+                        <div class="author-name">Ярослав Минчев</div>
+                        <div class="author-date">преди 3 седмици</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-cta">
+            <a href="https://g.page/r/CUDlw4N6E2CAEBM/review" target="_blank" rel="noopener noreferrer" class="btn-google-reviews">
+                <i class="fab fa-google"></i> Вижте всички отзиви в Google
+            </a>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 14px;">или <a href="https://g.page/r/CUDlw4N6E2CAEBM/review" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); text-decoration: underline;">оставете свой отзив</a> – ще ни помогнете много!</p>
         </div>
     </section>
 
