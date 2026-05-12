@@ -47,6 +47,11 @@
         "postalCode": "9010",
         "addressCountry": "BG"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.2156,
+        "longitude": 27.9352
+      },
       "areaServed": [
         { "@type": "City", "name": "Варна" },
         { "@type": "City", "name": "Добрич" },
@@ -156,6 +161,111 @@
       ]
     }
     </script>
+
+    <!-- Schema.org: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Диамантено пробиване Варна",
+      "alternateName": "Drilling House",
+      "url": "https://drillinghouse.com/",
+      "inLanguage": "bg-BG",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Drilling House",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://drillinghouse.com/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://drillinghouse.com/#home" },
+        { "@type": "ListItem", "position": 2, "name": "За нас", "item": "https://drillinghouse.com/#about" },
+        { "@type": "ListItem", "position": 3, "name": "Услуги", "item": "https://drillinghouse.com/#services" },
+        { "@type": "ListItem", "position": 4, "name": "Ценоразпис", "item": "https://drillinghouse.com/#pricing" },
+        { "@type": "ListItem", "position": 5, "name": "Галерия", "item": "https://drillinghouse.com/#gallery" },
+        { "@type": "ListItem", "position": 6, "name": "Отзиви", "item": "https://drillinghouse.com/#testimonials" },
+        { "@type": "ListItem", "position": 7, "name": "Въпроси", "item": "https://drillinghouse.com/#faq" },
+        { "@type": "ListItem", "position": 8, "name": "Контакти", "item": "https://drillinghouse.com/#contact" }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org: Individual Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Диамантено пробиване на отвори в бетон",
+          "serviceType": "Диамантено пробиване",
+          "description": "Прецизно пробиване на отвори в стоманобетон, тухла, камък и панел с диаметри от Ø20 до Ø300 мм. Без прах, без шум, без щети по конструкцията.",
+          "provider": { "@type": "LocalBusiness", "name": "Drilling House – Диамантено пробиване Варна", "telephone": "+359887696940" },
+          "areaServed": [
+            { "@type": "City", "name": "Варна" },
+            { "@type": "City", "name": "Добрич" },
+            { "@type": "City", "name": "Шумен" },
+            { "@type": "City", "name": "Балчик" }
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "EUR",
+            "lowPrice": "20",
+            "highPrice": "60",
+            "offerCount": 7,
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": "80",
+              "priceCurrency": "EUR",
+              "description": "Минимална сума за ангажимент"
+            }
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Отвори за климатици и термопомпи",
+          "serviceType": "Пробиване за климатична техника",
+          "description": "Стандартни отвори за инсталация на климатици и термопомпи в стоманобетон, тухла и панел. Чисто и без щети.",
+          "provider": { "@type": "LocalBusiness", "name": "Drilling House – Диамантено пробиване Варна", "telephone": "+359887696940" },
+          "areaServed": { "@type": "AdministrativeArea", "name": "Варна и област" }
+        },
+        {
+          "@type": "Service",
+          "name": "Отвори за ВиК инсталации",
+          "serviceType": "Пробиване за водопровод и канализация",
+          "description": "Отвори в стоманобетон и тухлени стени за водопроводни и канализационни тръби.",
+          "provider": { "@type": "LocalBusiness", "name": "Drilling House – Диамантено пробиване Варна", "telephone": "+359887696940" },
+          "areaServed": { "@type": "AdministrativeArea", "name": "Варна и област" }
+        },
+        {
+          "@type": "Service",
+          "name": "Отвори за аспирация и вентилация",
+          "serviceType": "Пробиване за вентилационни системи",
+          "description": "Отвори за кухненски аспиратори, баня, вентилационни системи и аспирация.",
+          "provider": { "@type": "LocalBusiness", "name": "Drilling House – Диамантено пробиване Варна", "telephone": "+359887696940" },
+          "areaServed": { "@type": "AdministrativeArea", "name": "Варна и област" }
+        },
+        {
+          "@type": "Service",
+          "name": "Пробиване в силно армиран бетон",
+          "serviceType": "Диамантено пробиване в стоманобетон",
+          "description": "Специализирана техника за стоманобетон с тежка армировка – без напукване около отвора.",
+          "provider": { "@type": "LocalBusiness", "name": "Drilling House – Диамантено пробиване Варна", "telephone": "+359887696940" },
+          "areaServed": { "@type": "AdministrativeArea", "name": "Варна и област" }
+        }
+      ]
+    }
+    </script>
     
     <!-- Load Icons (FontAwesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -198,7 +308,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url('background-diamanteno-probivane.jpg');
+            background-image: url('background-diamanteno-probivane.webp');
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -232,10 +342,6 @@
             background-color: transparent;
             position: relative;
             z-index: 1;
-        }
-
-        .hero {
-            background: transparent;
         }
 
         .about-us { background-color: rgba(5,5,5,0.55); }
@@ -702,7 +808,7 @@
         .hero {
             padding: 80px 20px;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1504307651254-35680f356f12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: linear-gradient(rgba(10,10,10,0.55), rgba(10,10,10,0.65)), url('probivane-podzemno-pomeshtenie.webp') center center / cover no-repeat;
         }
 
         .hero h1 {
@@ -1184,22 +1290,22 @@
         <h2 class="section-title">Снимки от наши обекти</h2>
         <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Реални снимки от изпълнени проекти.</p>
         <div class="gallery-grid">
-            <img src="probivane-stomanobeton-varna.jpg" alt="Серия отвори за вентилация в стоманобетон – Варна" class="gallery-img" loading="lazy">
-            <img src="seriya-otvori-betonna-ploska.jpg" alt="Прецизно пробити отвори в бетонна плоча" class="gallery-img" loading="lazy">
-            <img src="otvori-tuhlena-stena-ventilatsiya.jpg" alt="Отвори за вентилационна инсталация в тухлена стена" class="gallery-img" loading="lazy">
-            <img src="diamantena-burgiya-v-deystvie.jpg" alt="Диамантена бургия в действие – пробиване на бетон" class="gallery-img" loading="lazy">
-            <img src="chist-otvor-beton.jpg" alt="Чист отвор в бетон след диамантено пробиване" class="gallery-img" loading="lazy">
-            <img src="otvori-masivna-stena-varna.jpg" alt="Серия отвори в масивна стоманобетонна стена във Варна" class="gallery-img" loading="lazy">
-            <img src="probivane-podzemno-pomeshtenie.jpg" alt="Пробити отвори в подземно помещение" class="gallery-img" loading="lazy">
-            <img src="detayl-otvor-armiran-beton.jpg" alt="Детайл от пробит отвор в армиран бетон" class="gallery-img" loading="lazy">
-            <img src="otvori-keramichni-plochki-banya.jpg" alt="Отвори през керамични плочки в баня – без напукване" class="gallery-img" loading="lazy">
-            <img src="otvor-vatreshen-zid.jpg" alt="Прецизен отвор във вътрешен зид" class="gallery-img" loading="lazy">
-            <img src="otvor-tavan-tunel-stomanobeton.jpg" alt="Чист отвор през стоманобетонна таванна плоча" class="gallery-img" loading="lazy">
-            <img src="dalbok-otvor-armiran-beton-detayl.jpg" alt="Детайл от дълбок отвор в армиран бетон" class="gallery-img" loading="lazy">
-            <img src="otvor-aspirator-kuhnya-montazh.jpg" alt="Отвор за кухненски аспиратор – готов за монтаж" class="gallery-img" loading="lazy">
-            <img src="dalbok-otvor-izmerena-dalbochina.jpg" alt="Дълбок отвор с измерена дълбочина над 70 см" class="gallery-img" loading="lazy">
-            <img src="otvor-fasaden-panel-izolatsiya.jpg" alt="Отвор в фасаден панел с топлоизолация" class="gallery-img" loading="lazy">
-            <img src="otvori-stena-elektro-instalatsiya.jpg" alt="Отвори в стена за електроинсталация" class="gallery-img" loading="lazy">
+            <img src="probivane-stomanobeton-varna.webp" alt="Серия отвори за вентилация в стоманобетон – Варна" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="seriya-otvori-betonna-ploska.webp" alt="Прецизно пробити отвори в бетонна плоча" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="otvori-tuhlena-stena-ventilatsiya.webp" alt="Отвори за вентилационна инсталация в тухлена стена" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="diamantena-burgiya-v-deystvie.webp" alt="Диамантена бургия в действие – пробиване на бетон" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="chist-otvor-beton.webp" alt="Чист отвор в бетон след диамантено пробиване" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="otvori-masivna-stena-varna.webp" alt="Серия отвори в масивна стоманобетонна стена във Варна" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="probivane-podzemno-pomeshtenie.webp" alt="Пробити отвори в подземно помещение" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="detayl-otvor-armiran-beton.webp" alt="Детайл от пробит отвор в армиран бетон" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="otvori-keramichni-plochki-banya.webp" alt="Отвори през керамични плочки в баня – без напукване" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="otvor-vatreshen-zid.webp" alt="Прецизен отвор във вътрешен зид" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="otvor-tavan-tunel-stomanobeton.webp" alt="Чист отвор през стоманобетонна таванна плоча" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="dalbok-otvor-armiran-beton-detayl.webp" alt="Детайл от дълбок отвор в армиран бетон" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="otvor-aspirator-kuhnya-montazh.webp" alt="Отвор за кухненски аспиратор – готов за монтаж" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="dalbok-otvor-izmerena-dalbochina.webp" alt="Дълбок отвор с измерена дълбочина над 70 см" class="gallery-img" loading="lazy" width="1000" height="1334">
+            <img src="otvor-fasaden-panel-izolatsiya.webp" alt="Отвор в фасаден панел с топлоизолация" class="gallery-img" loading="lazy" width="800" height="1068">
+            <img src="otvori-stena-elektro-instalatsiya.webp" alt="Отвори в стена за електроинсталация" class="gallery-img" loading="lazy" width="1000" height="1334">
         </div>
     </section>
 
@@ -1342,6 +1448,8 @@
             <div class="map-wrapper">
                 <iframe
                     src="https://maps.google.com/maps?q=%D1%83%D0%BB.%20%D0%9F%D0%B5%D1%82%D1%8A%D1%80%20%D0%A0%D0%B0%D0%B9%D1%87%D0%B5%D0%B2%203%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="600"
+                    height="400"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     title="Местоположение - Диамантено пробиване Варна">
