@@ -755,6 +755,52 @@
             margin-bottom: 40px;
         }
 
+        /* Conditions Section */
+        .conditions {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .condition-block {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--accent-color);
+            padding: 22px 26px;
+            margin-bottom: 18px;
+            border-radius: 4px;
+        }
+
+        .condition-block h3 {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .condition-block ul {
+            padding-left: 22px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .condition-block li {
+            margin-bottom: 6px;
+            line-height: 1.55;
+        }
+
+        .condition-block p {
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        .condition-subtitle {
+            margin-bottom: 10px !important;
+            color: var(--text-main) !important;
+        }
+
         .price-category h3 {
             font-size: 1.4rem;
             color: var(--accent-color);
@@ -1203,6 +1249,7 @@
             <a href="#about">За нас</a>
             <a href="#services">Услуги</a>
             <a href="#pricing">Ценоразпис</a>
+            <a href="#conditions">Условия</a>
             <a href="#gallery">Галерия</a>
             <a href="#testimonials">Отзиви</a>
             <a href="#faq">Въпроси</a>
@@ -1289,6 +1336,40 @@
             <p style="text-align: right; color: var(--text-muted); font-size: 0.85rem; margin-top: 10px; font-style: italic;">Цените са без ДДС.</p>
         </div>
 
+    </section>
+
+    <!-- Conditions Section -->
+    <section class="conditions" id="conditions">
+        <h2 class="section-title">Важно при поръчка</h2>
+
+        <div class="condition-block">
+            <h3><i class="fas fa-euro-sign"></i> Цената не включва</h3>
+            <ul>
+                <li>подготовка на местата за отвори;</li>
+                <li>извозване на отпадъци от пробивите;</li>
+                <li>почистване преди и/или след работа на строителния обект.</li>
+            </ul>
+        </div>
+
+        <div class="condition-block">
+            <h3><i class="fas fa-truck"></i> Транспортни разходи</h3>
+            <p>В зависимост от локацията на обекта, е възможно начисляване на допълнителни транспортни разходи.</p>
+        </div>
+
+        <div class="condition-block">
+            <h3><i class="fas fa-exclamation-triangle"></i> Отговорност и ангажименти</h3>
+            <p class="condition-subtitle"><strong>Не носим отговорност за:</strong></p>
+            <ul>
+                <li>влияние върху конструктивната цялост, здравина и надеждност;</li>
+                <li>щети от изтичаща вода, използвана за охлаждане на боркороната по време на пробиване.</li>
+            </ul>
+            <p class="condition-subtitle" style="margin-top: 20px;"><strong>Ангажимент на Възложителя е:</strong></p>
+            <ul>
+                <li>да осигури достъпност на апаратурата до местата за пробиване;</li>
+                <li>да маркира предварително местата за отворите;</li>
+                <li>да обезопаси зоната около пробивите от преминаващи хора (възможност за падащи предмети).</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Gallery Section -->
