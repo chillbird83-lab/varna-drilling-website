@@ -794,20 +794,23 @@
         }
 
         header h2 {
-            font-size: 1.4rem;
-            letter-spacing: 1px;
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
             margin: 0;
             flex: 1 1 auto;
             min-width: 0;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: lowercase;
         }
 
         header .site-title {
             display: flex;
             flex-direction: column;
-            gap: 2px;
+            gap: 1px;
             flex: 1 1 auto;
             min-width: 0;
-            line-height: 1.1;
+            line-height: 1;
         }
 
         header .site-title h2 {
@@ -816,12 +819,16 @@
         }
 
         header .brand-name {
-            font-size: 0.7rem;
-            letter-spacing: 2.5px;
-            color: var(--accent-color);
-            font-weight: 700;
+            font-size: 1.55rem;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+            font-weight: 800;
             text-transform: uppercase;
             line-height: 1;
+        }
+
+        header .brand-name span {
+            color: var(--accent-color);
         }
 
         header span {
@@ -854,8 +861,8 @@
         /* On mobile: quick links wrap to full-width second row */
         @media (max-width: 820px) {
             header { padding: 10px 14px; }
-            header h2 { font-size: 1.05rem; letter-spacing: 0.5px; }
-            header .brand-name { font-size: 0.6rem; letter-spacing: 1.5px; }
+            header h2 { font-size: 0.65rem; letter-spacing: 1.2px; }
+            header .brand-name { font-size: 1.35rem; letter-spacing: -0.5px; }
             .header-quick {
                 order: 3;
                 width: 100%;
@@ -1389,8 +1396,8 @@
                 padding: 10px 14px;
             }
             header h2 {
-                font-size: 1.05rem;
-                letter-spacing: 0.5px;
+                font-size: 0.65rem;
+                letter-spacing: 1.2px;
             }
 
             /* Slightly narrower drawer on phones */
@@ -1483,7 +1490,8 @@
         }
 
         @media (max-width: 380px) {
-            header h2 { font-size: 0.95rem; }
+            header h2 { font-size: 0.6rem; }
+            header .brand-name { font-size: 1.2rem; }
             .hero h1 { font-size: 1.45rem; }
         }
     </style>
@@ -1497,8 +1505,8 @@
     <!-- Header (sticky, 2-row capable on mobile) -->
     <header>
         <div class="site-title">
-            <div class="brand-name">DRILLING HOLES</div>
-            <h2>ДИАМАНТЕНО <span>ПРОБИВАНЕ</span> ВАРНА</h2>
+            <div class="brand-name">DRILLING<span>HOLES</span></div>
+            <h2>диамантено пробиване Варна</h2>
         </div>
         <nav class="header-quick" aria-label="Бързи връзки">
             <a href="#services">Услуги</a>
