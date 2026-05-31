@@ -200,6 +200,24 @@
             margin-top: auto;
         }
         footer a { color: var(--accent-color); text-decoration: none; }
+
+        /* Back-to-top button */
+        .back-to-top {
+            position: fixed; bottom: 24px; right: 24px;
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--accent-color); color: #0a0a0a;
+            border: none; cursor: pointer; font-size: 18px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+            opacity: 0; visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease, background 0.18s ease, transform 0.18s ease;
+            z-index: 95;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .back-to-top:hover { background: #e08e0b; transform: translateY(-3px); }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        @media (max-width: 600px) {
+            .back-to-top { right: 16px; width: 44px; height: 44px; font-size: 16px; }
+        }
     </style>
 </head>
 <body>
@@ -264,7 +282,25 @@
     </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<!-- Back to top -->
+<button id="backToTop" class="back-to-top" aria-label="Към върха на страницата">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+(function() {
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+    }, { passive: true });
+    btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+</script>
 
 </body>
 </html>
