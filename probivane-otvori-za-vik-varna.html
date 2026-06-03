@@ -44,7 +44,6 @@
             "url": "https://drillingholes.com/",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "ул. „Петър Райчев\" №3, вх. А",
                 "addressLocality": "Варна",
                 "postalCode": "9000",
                 "addressCountry": "BG"
@@ -205,7 +204,13 @@
         .breadcrumb a:hover { color: var(--accent-color); }
 
         /* Hero */
-        .hero { padding: 50px 0 50px; border-bottom: 1px solid var(--border-subtle); }
+        .hero {
+            padding: 50px 0 50px;
+            border-bottom: 1px solid var(--border-subtle);
+            background:
+                linear-gradient(rgba(10,10,10,0.78), rgba(10,10,10,0.95)),
+                url('/seriya-otvori-betonna-ploska.webp') center/cover no-repeat;
+        }
         .hero .tag {
             display: inline-block;
             background: rgba(243,156,18,0.12);
@@ -488,7 +493,6 @@
         </div>
     </div>
 </header>
-
 <!-- Section 1 — Price -->
 <section class="block">
     <div class="container">
@@ -696,7 +700,7 @@
 
 <footer>
     <div class="container">
-        © <span id="year"></span> Drilling Holes – Диамантено пробиване Варна · <a href="/">Към началната страница</a>
+        © <span id="year"></span> Drilling Holes · Управител: Благовест Дамянов · Основана август 2023 г. · <a href="/">Към началната страница</a>
     </div>
 </footer>
 
