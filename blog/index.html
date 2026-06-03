@@ -61,6 +61,9 @@
     }
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -68,7 +71,7 @@
             --bg-dark: #0a0a0a;
             --bg-card: #1a1a1a;
             --text-main: #ffffff;
-            --text-muted: #a0a0a0;
+            --text-muted: #b0b0b0;
             --accent-color: #f39c12;
             --accent-hover: #e08e0b;
             --border-subtle: #2a2a2a;
@@ -77,7 +80,9 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             background: var(--bg-dark);
             color: var(--text-main);
             line-height: 1.7;
@@ -218,6 +223,23 @@
         @media (max-width: 600px) {
             .back-to-top { right: 16px; width: 44px; height: 44px; font-size: 16px; }
         }
+
+        /* Phase 1 — typography + a11y polish (added 31 May 2026) */
+        h1, h2, h3, .brand-name { letter-spacing: -0.015em; }
+        :focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) { outline: none; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -258,14 +280,26 @@
 <main class="container">
     <div class="article-list">
 
+        <a class="article-card" href="/blog/diamanteno-vs-udarno-probivane">
+            <span class="tag"><i class="fas fa-balance-scale"></i> Сравнение</span>
+            <h2>Диамантено vs ударно пробиване: кое е по-добро и кога</h2>
+            <p>Сравнение между двете технологии — цена, шум, прах, прецизност и кога да изберете всяка. Практически примери за климатик, ВиК и стоманобетон. Включително честен анализ на ситуациите, в които ударното пробиване е достатъчно.</p>
+            <div class="meta">
+                <span><i class="far fa-calendar"></i> 31 май 2026</span>
+                <span><i class="far fa-clock"></i> 7 мин. четене</span>
+                <span><i class="fas fa-info-circle"></i> Ръководство за клиенти</span>
+            </div>
+            <span class="read-more">Прочети статията <i class="fas fa-arrow-right"></i></span>
+        </a>
+
         <a class="article-card" href="/blog/kolko-struva-diamanteno-probivane-ceni-2026">
             <span class="tag"><i class="fas fa-tag"></i> Цени и услуги</span>
-            <h2>Колко струва диамантено пробиване във Варна? Цени 2026</h2>
-            <p>Пълен ценоразпис за диамантено пробиване във Варна и региона. От 20 евро на отвор, минимум 80 евро ангажимент. Какво влияе на цената, кога се прилага минималната сума и какво не е включено – без скрити такси.</p>
+            <h2>Колко струва диамантено пробиване? Пълно ръководство за цени (2026)</h2>
+            <p>Какво влияе на цената на едно пробиване, как се прилага минималната сума за ангажимент и какво НЕ е включено. Реален пример: публикуван ценоразпис на фирма от Варна. От 20 € за стандартен отвор до 60 € за Ø300 mm.</p>
             <div class="meta">
                 <span><i class="far fa-calendar"></i> 18 май 2026</span>
                 <span><i class="far fa-clock"></i> 6 мин. четене</span>
-                <span><i class="fas fa-map-marker-alt"></i> Варна и областта</span>
+                <span><i class="fas fa-info-circle"></i> Ръководство за клиенти</span>
             </div>
             <span class="read-more">Прочети статията <i class="fas fa-arrow-right"></i></span>
         </a>

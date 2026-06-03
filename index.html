@@ -354,6 +354,9 @@
     </script>
     
     <!-- Load Icons (FontAwesome) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -362,7 +365,7 @@
             --bg-dark: #0a0a0a;
             --bg-card: #1a1a1a;
             --text-main: #ffffff;
-            --text-muted: #a0a0a0;
+            --text-muted: #b0b0b0;
             --accent-color: #f39c12; /* Construction Yellow/Gold */
             --viber-color: #7360f2;
         }
@@ -372,7 +375,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         html {
@@ -1514,6 +1519,24 @@
             header .brand-name { font-size: 1.2rem; }
             .hero h1 { font-size: 1.45rem; }
         }
+
+        /* Phase 1 — typography + a11y polish (added 31 May 2026) */
+        h1, h2, h3, .brand-name { letter-spacing: -0.015em; }
+        .price-table td, .price-cell, .testimonial-stars, .rating-num { font-variant-numeric: tabular-nums; }
+        :focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) { outline: none; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1633,6 +1656,7 @@
         <div class="condition-block">
             <h3><i class="fas fa-faucet"></i> Отвори за ВиК (водопровод и канализация)</h3>
             <p>Пробиване на отвори за тръби, канализация, водопровод и подово отопление. Прецизно позициониране без вибрации, които биха увредили съседни инсталации. Изпълняваме диаметри от Ø50 до Ø300 mm — както малки отвори за тръби, така и по-големи за главни канализационни линии. Услугата е особено ценена от ВиК фирми и инсталационни екипи във Варна.</p>
+            <p style="margin-top: 12px;"><a href="/probivane-otvori-za-vik-varna" style="color: var(--accent-color); font-weight: 600; text-decoration: none; font-size: 0.95rem;">→ Подробни условия и цени: пробиване отвори за ВиК във Варна</a></p>
         </div>
 
         <div class="condition-block">
@@ -1743,10 +1767,28 @@
                 <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">Виж услугите за Добрич →</span>
             </a>
 
+            <a href="/diamanteno-probivane-balchik" style="background-color: rgba(26,26,26,0.9); border: 1px solid #2a2a2a; border-radius: 8px; padding: 22px 24px; text-decoration: none; color: inherit; transition: border-color 0.18s ease, transform 0.18s ease; display: block;" onmouseover="this.style.borderColor='#f39c12'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='#2a2a2a'; this.style.transform='translateY(0)';">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <i class="fas fa-map-marker-alt" style="color: var(--accent-color); font-size: 1.1rem;"></i>
+                    <h3 style="color: var(--text-main); font-size: 1.15rem; margin: 0;">Балчик</h3>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.92rem; margin: 0 0 10px;">~40 км от Варна. Балчик, Албена, Кранево, Оброчище. Хотели, ваканционни имоти, частни клиенти.</p>
+                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">Виж услугите за Балчик →</span>
+            </a>
+
+            <a href="/diamanteno-probivane-shumen" style="background-color: rgba(26,26,26,0.9); border: 1px solid #2a2a2a; border-radius: 8px; padding: 22px 24px; text-decoration: none; color: inherit; transition: border-color 0.18s ease, transform 0.18s ease; display: block;" onmouseover="this.style.borderColor='#f39c12'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='#2a2a2a'; this.style.transform='translateY(0)';">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <i class="fas fa-map-marker-alt" style="color: var(--accent-color); font-size: 1.1rem;"></i>
+                    <h3 style="color: var(--text-main); font-size: 1.15rem; margin: 0;">Шумен</h3>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.92rem; margin: 0 0 10px;">~85 км от Варна. Шумен, Велики Преслав, Каспичан. За обемни поръчки и фирмени партньорства.</p>
+                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">Виж услугите за Шумен →</span>
+            </a>
+
             <div style="background-color: rgba(26,26,26,0.5); border: 1px dashed #2a2a2a; border-radius: 8px; padding: 22px 24px; opacity: 0.6;">
                 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
                     <i class="fas fa-map-marker-alt" style="color: var(--text-muted); font-size: 1.05rem;"></i>
-                    <h3 style="color: var(--text-muted); font-size: 1.1rem; margin: 0;">Балчик, Шумен, Девня, Каварна</h3>
+                    <h3 style="color: var(--text-muted); font-size: 1.1rem; margin: 0;">Каварна, Девня</h3>
                 </div>
                 <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0; font-style: italic;">Подробни страници за тези градове — скоро. Междувременно — обадете се на 0887 69 69 40.</p>
             </div>
