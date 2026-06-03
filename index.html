@@ -45,9 +45,13 @@
       "image": "diamanteno-probivane-varna-cover.jpg",
       "telephone": "+359887696940",
       "priceRange": "$$",
+      "foundingDate": "2023-08",
+      "founder": {
+        "@type": "Person",
+        "name": "Благовест Дамянов"
+      },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "ул. Петър Райчев №3, вх. А",
         "addressLocality": "Варна",
         "addressRegion": "Варна",
         "postalCode": "9000",
@@ -239,7 +243,6 @@
             "image": "https://drillingholes.com/logo.png",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "ул. Петър Райчев 3, вх. А",
               "addressLocality": "Варна",
               "postalCode": "9000",
               "addressCountry": "BG"
@@ -278,7 +281,6 @@
             "image": "https://drillingholes.com/logo.png",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "ул. Петър Райчев 3, вх. А",
               "addressLocality": "Варна",
               "postalCode": "9000",
               "addressCountry": "BG"
@@ -299,7 +301,6 @@
             "image": "https://drillingholes.com/logo.png",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "ул. Петър Райчев 3, вх. А",
               "addressLocality": "Варна",
               "postalCode": "9000",
               "addressCountry": "BG"
@@ -320,7 +321,6 @@
             "image": "https://drillingholes.com/logo.png",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "ул. Петър Райчев 3, вх. А",
               "addressLocality": "Варна",
               "postalCode": "9000",
               "addressCountry": "BG"
@@ -341,7 +341,6 @@
             "image": "https://drillingholes.com/logo.png",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "ул. Петър Райчев 3, вх. А",
               "addressLocality": "Варна",
               "postalCode": "9000",
               "addressCountry": "BG"
@@ -1490,28 +1489,27 @@
             footer { padding: 35px 15px 90px 15px; }
             footer h2 { font-size: 1.3rem; }
 
-            /* Floating call button — always visible on mobile */
+            /* Floating call button — circular FAB, bottom-right */
             .mobile-call-fab {
                 display: flex;
                 position: fixed;
-                bottom: 16px;
-                left: 16px;
-                right: 16px;
+                bottom: 20px;
+                right: 20px;
                 z-index: 200;
+                width: 56px;
+                height: 56px;
                 background-color: var(--accent-color);
                 color: #000;
-                padding: 14px 20px;
-                border-radius: 50px;
-                font-weight: bold;
+                border-radius: 50%;
                 text-decoration: none;
                 align-items: center;
                 justify-content: center;
-                gap: 10px;
-                font-size: 1rem;
+                font-size: 0;
                 box-shadow: 0 6px 20px rgba(0,0,0,0.6);
             }
-            .mobile-call-fab i { font-size: 1.1rem; }
-            .back-to-top { bottom: 90px; right: 16px; width: 44px; height: 44px; font-size: 16px; }
+            .mobile-call-fab i { font-size: 22px; }
+            .mobile-call-fab .fab-text { display: none; }
+            .back-to-top { bottom: 86px; right: 20px; width: 44px; height: 44px; font-size: 16px; }
         }
 
         @media (max-width: 380px) {
@@ -1536,6 +1534,50 @@
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
+        }
+
+        /* Phase 2 — big-number stat grid */
+        .stat-grid-section {
+            padding: 40px 20px 30px;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .stat {
+            text-align: center;
+            padding: 20px 14px;
+        }
+        .stat-num {
+            display: block;
+            font-size: clamp(28px, 4.5vw, 48px);
+            font-weight: 800;
+            color: var(--accent-color);
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 10px;
+            font-variant-numeric: tabular-nums;
+        }
+        .stat-label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        @media (max-width: 700px) {
+            .stat-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .stat { padding: 16px 8px; }
+            .stat-label { font-size: 11px; }
+            .stat-grid-section { padding: 30px 16px 20px; }
         }
     </style>
 </head>
@@ -1614,6 +1656,28 @@
             <!-- Replace +359887696940 with his actual phone number -->
             <a href="tel:+359887696940" class="btn btn-call"><i class="fas fa-phone-alt"></i> Обади се: 0887 69 69 40</a>
             <a href="viber://chat?number=+359887696940" class="btn btn-viber"><i class="fab fa-viber"></i> Пиши във Viber</a>
+        </div>
+    </section>
+
+    <!-- Big-number stat grid -->
+    <section class="stat-grid-section">
+        <div class="stat-grid">
+            <div class="stat">
+                <span class="stat-num">5.0★</span>
+                <span class="stat-label">рейтинг от клиенти</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">100 км</span>
+                <span class="stat-label">радиус на обслужване</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">24–48ч</span>
+                <span class="stat-label">срок на изпълнение</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">Ø20–300</span>
+                <span class="stat-label">mm диапазон на пробиване</span>
+            </div>
         </div>
     </section>
 
@@ -1785,13 +1849,14 @@
                 <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">Виж услугите за Шумен →</span>
             </a>
 
-            <div style="background-color: rgba(26,26,26,0.5); border: 1px dashed #2a2a2a; border-radius: 8px; padding: 22px 24px; opacity: 0.6;">
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                    <i class="fas fa-map-marker-alt" style="color: var(--text-muted); font-size: 1.05rem;"></i>
-                    <h3 style="color: var(--text-muted); font-size: 1.1rem; margin: 0;">Каварна, Девня</h3>
+            <a href="tel:+359887696940" style="background-color: rgba(26,26,26,0.9); border: 1px solid #2a2a2a; border-radius: 8px; padding: 22px 24px; text-decoration: none; color: inherit; transition: border-color 0.18s ease, transform 0.18s ease; display: block;" onmouseover="this.style.borderColor='#f39c12'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='#2a2a2a'; this.style.transform='translateY(0)';">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <i class="fas fa-phone" style="color: var(--accent-color); font-size: 1.1rem;"></i>
+                    <h3 style="color: var(--text-main); font-size: 1.15rem; margin: 0;">Друг град или село?</h3>
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0; font-style: italic;">Подробни страници за тези градове — скоро. Междувременно — обадете се на 0887 69 69 40.</p>
-            </div>
+                <p style="color: var(--text-muted); font-size: 0.92rem; margin: 0 0 10px;">Каварна, Девня, Провадия, Аксаково и до 100 км от Варна. Индивидуален разчет за всеки обект.</p>
+                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">0887 69 69 40 →</span>
+            </a>
 
         </div>
     </section>
@@ -2026,8 +2091,8 @@
                 <div class="contact-row">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
-                        <h3>Адрес</h3>
-                        <p>ул. „Петър Райчев" №3, вх. А<br>ж.к. Левски / Приморски<br>9000 Варна, България</p>
+                        <h3>Зона на работа</h3>
+                        <p>Варна и областта (до 100 км)<br>Добрич, Балчик, Шумен, Каварна, Девня</p>
                     </div>
                 </div>
                 <div class="contact-row">
@@ -2059,15 +2124,27 @@
                     </div>
                 </div>
             </div>
-            <div class="map-wrapper">
-                <iframe
-                    src="https://maps.google.com/maps?q=%D1%83%D0%BB.%20%D0%9F%D0%B5%D1%82%D1%8A%D1%80%20%D0%A0%D0%B0%D0%B9%D1%87%D0%B5%D0%B2%203%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    width="600"
-                    height="400"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Местоположение - Диамантено пробиване Варна">
-                </iframe>
+            <div class="contact-info">
+                <div class="contact-row">
+                    <i class="fas fa-route"></i>
+                    <div>
+                        <h3>Покриваме целия район</h3>
+                        <p>Работим във Варна и до 100 км в околността. Идваме при вас — на адреса на обекта, без нужда от посещение при нас.</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Градове, които обслужваме</h3>
+                        <p>
+                            Варна (всички квартали) ·
+                            <a href="/diamanteno-probivane-dobrich">Добрич →</a> ·
+                            <a href="/diamanteno-probivane-balchik">Балчик →</a> ·
+                            <a href="/diamanteno-probivane-shumen">Шумен →</a> ·
+                            Каварна · Девня · Провадия · Аксаково
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2080,7 +2157,8 @@
         <div class="btn-container">
             <a href="tel:+359887696940" class="btn btn-call"><i class="fas fa-phone-alt"></i> 0887 69 69 40</a>
         </div>
-        <p style="margin-top: 30px;">&copy; 2024 Диамантено Пробиване Варна. Всички права запазени.</p>
+        <p style="margin-top: 30px;">&copy; <span id="year">2026</span> Drilling Holes · Управител: Благовест Дамянов · Основана август 2023 г.</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>
 
     <!-- Floating Mobile Call Button (visible only on small screens) -->
