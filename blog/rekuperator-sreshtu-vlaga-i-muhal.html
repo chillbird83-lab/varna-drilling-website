@@ -378,6 +378,24 @@
                 scroll-behavior: auto !important;
             }
         }
+        /* NIRA banner: the owner's recuperator shop */
+        .nira-promo { display: grid; grid-template-columns: 210px 1fr; gap: 28px; align-items: center; margin: 28px 0; padding: 26px 30px; background: linear-gradient(135deg, #1d1d1d 0%, #121212 100%); border: 1px solid var(--border-subtle); border-radius: 14px; position: relative; overflow: hidden; }
+        .nira-promo::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent-color), transparent 70%); }
+        .nira-promo .nira-promo__img { position: relative; display: flex; justify-content: center; }
+        .nira-promo .nira-promo__img::before { content: ""; position: absolute; inset: 0 4%; background: radial-gradient(closest-side, rgba(255,255,255,0.13), transparent); }
+        .nira-promo .nira-promo__img img { position: relative; width: 100%; max-width: 210px; height: auto; display: block; }
+        .nira-promo .nira-promo__eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-color); margin: 0 0 6px; }
+        .nira-promo .nira-promo__title { font-size: 22px; font-weight: 800; line-height: 1.25; color: var(--text-main); margin: 0 0 8px; }
+        .nira-promo .nira-promo__text { font-size: 15px; line-height: 1.55; color: var(--text-muted); margin: 0 0 14px; }
+        .nira-promo .nira-promo__facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+        .nira-promo .nira-promo__fact { font-size: 13.5px; color: var(--text-main); background: rgba(243,156,18,0.08); border: 1px solid rgba(243,156,18,0.28); border-radius: 999px; padding: 5px 12px; }
+        .nira-promo .nira-promo__btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-color); color: var(--bg-dark); font-weight: 700; font-size: 15px; padding: 11px 20px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+        .nira-promo .nira-promo__btn:hover { background: var(--accent-hover); }
+        @media (max-width: 640px) {
+            .nira-promo { grid-template-columns: 1fr; gap: 14px; padding: 24px 18px; text-align: center; }
+            .nira-promo .nira-promo__img img { max-width: 170px; }
+            .nira-promo .nira-promo__facts { justify-content: center; }
+        }
     </style>
 </head>
 <body>
@@ -508,8 +526,22 @@
 <div class="callout">
     <h3><i class="fas fa-link"></i> Отвор и монтаж в едно посещение</h3>
     <p>Ние правим и отвора, и монтажа на рекуператора — един изпълнител, едно посещение. Вижте условията и цената на страницата <a class="inline" href="/probivane-i-montazh-rekuperator-varna">пробиване и монтаж на рекуператор във Варна</a>. Ако ви трябва само отвор за вентилация или аспиратор, вижте <a class="inline" href="/probivane-otvori-za-ventilatsiya-varna">пробиване на отвори за вентилация</a>.</p>
-    <p>Ако още избирате уред, моделите Reventon Waller с цени и сравнение са на <a class="inline" href="https://nira-air.com/modeli/" style="white-space: nowrap;">nira-air.com</a>.</p>
 </div>
+
+<aside class="nira-promo" aria-label="Рекуператори NIRA">
+    <div class="nira-promo__img"><img src="/nira-rekuperator-reventon-waller.webp" alt="Рекуператор Reventon Waller Wi-Fi" width="520" height="303" loading="lazy"></div>
+    <div>
+        <div class="nira-promo__eyebrow">Рекуператори Reventon Waller</div>
+        <div class="nira-promo__title">Нямате уред? Изберете модел от NIRA</div>
+        <div class="nira-promo__text">Четири модела за една стая: с дистанционно, с Wi-Fi или със сензор за влажност или CO₂.</div>
+        <div class="nira-promo__facts">
+            <span class="nira-promo__fact">От 352 € с ДДС</span>
+            <span class="nira-promo__fact">Безплатна доставка в цяла България</span>
+            <span class="nira-promo__fact">Монтаж от 120 € вместо от 150 €</span>
+        </div>
+        <a class="nira-promo__btn" href="https://nira-air.com/modeli/" rel="noopener">Вижте моделите и цените <i class="fas fa-arrow-right"></i></a>
+    </div>
+</aside>
 
 <h2><i class="fas fa-question-circle"></i> Често задавани въпроси</h2>
 
