@@ -251,6 +251,14 @@
             text-underline-offset: 3px;
         }
         article a.inline:hover { color: var(--accent-hover); }
+        /* In-text links and link buttons */
+        article a.inline { font-weight: 400; text-decoration-thickness: 2px; text-decoration-color: rgba(243, 156, 18, 0.5); }
+        article a.inline:hover { text-decoration-color: currentColor; }
+        .link-btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px; }
+        body a.link-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1.5px solid var(--accent-color); border-radius: 6px; color: var(--accent-color); font-weight: 700; font-size: 0.95rem; line-height: 1.3; text-decoration: none; transition: background 0.2s, color 0.2s; }
+        body a.link-btn:hover, body a.link-btn:focus-visible { background: var(--accent-color); color: #000; }
+        body a.link-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
         /* Price table */
         .price-table {
@@ -475,7 +483,8 @@
     </tbody>
 </table>
 
-<p class="price-note">Цените за диамантено пробиване са от ценоразписа на Drilling Holes (Варна, 2026). Цените за ударно пробиване са груба оценка за случай, в който клиентът има или наема перфоратор. <a class="inline" href="/blog/kolko-struva-diamanteno-probivane-ceni-2026">Виж пълно ръководство за цените на диамантеното пробиване</a>.</p>
+<p class="price-note">Цените за диамантено пробиване са от ценоразписа на Drilling Holes (Варна, 2026). Цените за ударно пробиване са груба оценка за случай, в който клиентът има или наема перфоратор.</p>
+<div class="link-btns"><a class="link-btn" href="/blog/kolko-struva-diamanteno-probivane-ceni-2026">Ръководство за цените<span class="sr-only"> на диамантеното пробиване</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
 
 <!-- When to choose diamond -->
 <h2><i class="fas fa-check-circle"></i> Кога да изберете диамантено пробиване</h2>

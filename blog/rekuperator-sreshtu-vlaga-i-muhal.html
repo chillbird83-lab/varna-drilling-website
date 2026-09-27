@@ -267,6 +267,14 @@
             text-underline-offset: 3px;
         }
         article a.inline:hover { color: var(--accent-hover); }
+        /* In-text links and link buttons */
+        article a.inline { font-weight: 400; text-decoration-thickness: 2px; text-decoration-color: rgba(243, 156, 18, 0.5); }
+        article a.inline:hover { text-decoration-color: currentColor; }
+        .link-btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px; }
+        body a.link-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1.5px solid var(--accent-color); border-radius: 6px; color: var(--accent-color); font-weight: 700; font-size: 0.95rem; line-height: 1.3; text-decoration: none; transition: background 0.2s, color 0.2s; }
+        body a.link-btn:hover, body a.link-btn:focus-visible { background: var(--accent-color); color: #000; }
+        body a.link-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
         /* Comparison table */
         .cmp-table {
@@ -525,7 +533,8 @@
 
 <div class="callout">
     <h3><i class="fas fa-link"></i> Отвор и монтаж в едно посещение</h3>
-    <p>Ние правим и отвора, и монтажа на рекуператора — един изпълнител, едно посещение. Вижте условията и цената на страницата <a class="inline" href="/probivane-i-montazh-rekuperator-varna">пробиване и монтаж на рекуператор във Варна</a>. Ако ви трябва само отвор за вентилация или аспиратор, вижте <a class="inline" href="/probivane-otvori-za-ventilatsiya-varna">пробиване на отвори за вентилация</a>.</p>
+    <p>Ние правим и отвора, и монтажа на рекуператора — един изпълнител, едно посещение.</p>
+<div class="link-btns"><a class="link-btn" href="/probivane-i-montazh-rekuperator-varna">Монтаж на рекуператор<span class="sr-only">: условия и цени</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a class="link-btn" href="/probivane-otvori-za-ventilatsiya-varna">Само отвор за вентилация<span class="sr-only"> или аспиратор</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
 </div>
 
 <aside class="nira-promo" aria-label="Рекуператори NIRA">

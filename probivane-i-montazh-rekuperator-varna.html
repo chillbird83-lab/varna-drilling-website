@@ -288,6 +288,14 @@
             text-underline-offset: 3px;
         }
         section.block a.inline:hover { color: var(--accent-hover); }
+        /* In-text links and link buttons */
+        section.block a.inline { font-weight: 400; text-decoration-thickness: 2px; text-decoration-color: rgba(243, 156, 18, 0.5); }
+        section.block a.inline:hover { text-decoration-color: currentColor; }
+        .link-btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px; }
+        body a.link-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1.5px solid var(--accent-color); border-radius: 6px; color: var(--accent-color); font-weight: 700; font-size: 0.95rem; line-height: 1.3; text-decoration: none; transition: background 0.2s, color 0.2s; }
+        body a.link-btn:hover, body a.link-btn:focus-visible { background: var(--accent-color); color: #000; }
+        body a.link-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
         /* Price table */
         .price-table {
@@ -578,7 +586,8 @@
         <h2><i class="fas fa-user-check"></i> Един изпълнител за отвора и монтажа</h2>
         <p>Обикновено монтажът на рекуператор минава през двама души: единият пробива отвора, другият монтира уреда. Това означава два телефона, два часа за уговаряне и въпроса „чия е грешката“, ако отворът не пасне на уреда.</p>
         <p>Ние правим и двете. Отворът е с точния диаметър за тръбата на уреда, защото същият човек, който пробива, го и монтира. Едно посещение, един отговорник за резултата.</p>
-        <p>Отворът правим с диамантена корона и водно охлаждане — точен кръг, без прах в стаята и без напукана мазилка по фасадата. Ако ви трябва само отворът, без монтаж на уред, вижте <a class="inline" href="/probivane-otvori-za-ventilatsiya-varna">пробиване на отвори за вентилация</a>.</p>
+        <p>Отворът правим с диамантена корона и водно охлаждане — точен кръг, без прах в стаята и без напукана мазилка по фасадата. Ако ви трябва само отворът, без монтаж на уред:</p>
+        <div class="link-btns"><a class="link-btn" href="/probivane-otvori-za-ventilatsiya-varna">Само отвор за вентилация<span class="sr-only"> — пробиване на отвори за вентилация</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
     </div>
 </section>
 
@@ -620,7 +629,8 @@
             <li><strong>Ремонт</strong>, при който се решава веднъж проблемът с проветряването</li>
         </ul>
         <p>За едно помещение стига един уред и един отвор. Ако ви трябва проветряване на цял апартамент с въздуховоди, това е централна система — нея не монтираме, но правим отворите за нея.</p>
-        <p>Повече за това кога рекуператорът наистина помага срещу влага и мухъл — в статията <a class="inline" href="/blog/rekuperator-sreshtu-vlaga-i-muhal">Рекуператор срещу влага и мухъл</a>.</p>
+        <p>Кога рекуператорът наистина помага срещу влага и мухъл:</p>
+        <div class="link-btns"><a class="link-btn" href="/blog/rekuperator-sreshtu-vlaga-i-muhal">Прочетете статията<span class="sr-only"> „Рекуператор срещу влага и мухъл“</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
     </div>
 </section>
 

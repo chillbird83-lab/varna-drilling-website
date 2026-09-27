@@ -251,6 +251,14 @@
             text-underline-offset: 3px;
         }
         article a.inline:hover { color: var(--accent-hover); }
+        /* In-text links and link buttons */
+        article a.inline { font-weight: 400; text-decoration-thickness: 2px; text-decoration-color: rgba(243, 156, 18, 0.5); }
+        article a.inline:hover { text-decoration-color: currentColor; }
+        .link-btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px; }
+        body a.link-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1.5px solid var(--accent-color); border-radius: 6px; color: var(--accent-color); font-weight: 700; font-size: 0.95rem; line-height: 1.3; text-decoration: none; transition: background 0.2s, color 0.2s; }
+        body a.link-btn:hover, body a.link-btn:focus-visible { background: var(--accent-color); color: #000; }
+        body a.link-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
         /* Price table */
         .price-table {
@@ -421,7 +429,8 @@
 <p>В тази статия ще видите <strong>какво влияе на цената, как се прилага минималната сума за ангажимент, какво не е включено и реален пример</strong> на ценоразпис на фирма от Варна. Без размиване, без скрити условия.</p>
 
 <div class="callout" style="margin: 24px 0;">
-    <p style="margin: 0;">🔗 <strong>Търсите конкретно цените за Варна?</strong> Вижте пълния ни <a class="inline" href="/#pricing">ценоразпис за услугите</a> на началната страница.</p>
+    <p style="margin: 0;"><strong>Търсите конкретно цените за Варна?</strong></p>
+<div class="link-btns"><a class="link-btn" href="/#pricing">Ценоразпис за Варна <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
 </div>
 
 <!-- What affects price -->
@@ -441,7 +450,8 @@
 <p>Цените в таблицата по-долу са за бетон. Стоманобетон, тухла, камък, газобетон и панел в общия случай се отнасят към същите цени — машината и боркороните се справят с всички тези материали. Изключение може да направи силно армиран бетон с особено гъста арматура, който отнема значително повече време. В такива случаи се уточнява предварително.</p>
 
 <h3>4. Локацията</h3>
-<p>Цените, които виждате онлайн при една фирма, обикновено са за нейния основен град. За обекти извън него (съседни общини, малки градчета, села) обикновено се добавя индивидуален разчет за транспорт. Колкото по-голям е обемът работа, толкова по-малко значение има транспортът в крайната сметка. Конкретно за пробиване в Добрич от Варна виж нашата страница за <a class="inline" href="/diamanteno-probivane-dobrich">диамантено пробиване в Добрич</a>.</p>
+<p>Цените, които виждате онлайн при една фирма, обикновено са за нейния основен град. За обекти извън него (съседни общини, малки градчета, села) обикновено се добавя индивидуален разчет за транспорт. Колкото по-голям е обемът работа, толкова по-малко значение има транспортът в крайната сметка.</p>
+<div class="link-btns"><a class="link-btn" href="/diamanteno-probivane-dobrich">Пробиване в Добрич <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
 
 <!-- Full price list -->
 <h2><i class="fas fa-list"></i> Пример: реален ценоразпис на фирма (Варна, 2026)</h2>
@@ -544,7 +554,8 @@
 
 <div class="faq-item">
     <h3>Каква е цената за пробиване в съседен на изпълнителя град?</h3>
-    <p>Цените за самото пробиване обикновено са същите. Към тях се добавя индивидуален транспортен разчет — зависи от разстоянието и обема работа. Конкретно за Добрич от Варна — вижте <a class="inline" href="/diamanteno-probivane-dobrich">диамантено пробиване в Добрич</a>.</p>
+    <p>Цените за самото пробиване обикновено са същите. Към тях се добавя индивидуален транспортен разчет — зависи от разстоянието и обема работа.</p>
+<div class="link-btns"><a class="link-btn" href="/diamanteno-probivane-dobrich">Пробиване в Добрич <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
 </div>
 
 <div class="faq-item">
