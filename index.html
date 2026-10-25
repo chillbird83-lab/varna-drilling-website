@@ -1419,6 +1419,8 @@
             cursor: pointer;
         }
 
+        .gallery-video { cursor: default; background: #000; object-position: 50% 30%; }
+
         .gallery-img:hover {
             transform: scale(1.02);
             box-shadow: 0 8px 25px rgba(0,0,0,0.6);
@@ -2034,6 +2036,7 @@
         <h2 class="section-title">Снимки от наши обекти</h2>
         <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Реални снимки от изпълнени проекти.</p>
         <div class="gallery-grid">
+            <video class="gallery-img gallery-video" data-src="diamanteno-probivane-fasada-proboy.mp4" poster="diamanteno-probivane-fasada-proboy.webp" muted loop playsinline preload="none" width="540" height="960" aria-label="Диамантената корона излиза през фасадата и оставя кръгъл отвор"></video>
             <img src="probivane-stomanobeton-varna.webp" alt="Серия отвори за вентилация в стоманобетон – Варна" class="gallery-img" loading="lazy" width="1000" height="1334">
             <img src="seriya-otvori-betonna-ploska.webp" alt="Прецизно пробити отвори в бетонна плоча" class="gallery-img" loading="lazy" width="1000" height="1334">
             <img src="otvori-tuhlena-stena-ventilatsiya.webp" alt="Отвори за вентилационна инсталация в тухлена стена" class="gallery-img" loading="lazy" width="1000" height="1334">
@@ -2320,6 +2323,28 @@
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && nav.classList.contains('open')) closeNav();
         });
+    })();
+
+    // Gallery video: load and play only when it scrolls into view
+    (function() {
+        var v = document.querySelector('.gallery-video');
+        if (!v) return;
+        var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (still || !('IntersectionObserver' in window)) {
+            v.controls = true;
+            v.src = v.dataset.src;
+            return;
+        }
+        new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (e.isIntersecting) {
+                    if (!v.src) v.src = v.dataset.src;
+                    v.play().catch(function() {});
+                } else {
+                    v.pause();
+                }
+            });
+        }, { rootMargin: '200px' }).observe(v);
     })();
 
     // Back-to-top button
