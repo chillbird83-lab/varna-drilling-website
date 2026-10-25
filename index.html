@@ -1419,7 +1419,7 @@
             cursor: pointer;
         }
 
-        .gallery-video { cursor: default; background: #000; object-position: 50% 30%; }
+        .gallery-video { height: auto; cursor: default; background: #000; object-position: 50% 30%; }
 
         .gallery-img:hover {
             transform: scale(1.02);
@@ -1533,6 +1533,7 @@
             .gallery { padding: 40px 12px; }
             .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; max-width: 100%; }
             .gallery-img { aspect-ratio: 3 / 4; }
+            .gallery-video { grid-column: 1 / -1; aspect-ratio: 4 / 5; }
 
             footer { padding: 35px 15px 90px 15px; }
             footer h2 { font-size: 1.3rem; }
