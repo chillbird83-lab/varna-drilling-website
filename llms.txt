@@ -45,6 +45,11 @@ Drilling Holes (Диамантено пробиване) is a specialized contra
 - [Diamond drilling in Devnya and Provadia](https://drillingholes.com/diamanteno-probivane-devnya-provadia): Inland/industrial towns west of Varna — Devnya ~30 km on the A2 highway (factories, production sites), Provadia ~50 km; also Beloslav, Suvorovo, Vetrino and villages
 - [Diamond drilling in Razgrad](https://drillingholes.com/diamanteno-probivane-razgrad): Industrial sites and volume jobs in Razgrad, Isperih and Kubrat, ~130 km from Varna via Shumen, booked in advance
 - [Blog](https://drillingholes.com/blog/): Pricing guides and educational articles about diamond drilling
+  - [Hole for a kitchen hood](https://drillingholes.com/blog/otvor-za-aspirator): which hole diameter a hood needs (Ø125 duct → Ø132 hole, Ø150 → Ø162), where to put it, how long it takes, price, and drilling when the kitchen is already fitted
+  - [Diamond drilling prices 2026](https://drillingholes.com/blog/kolko-struva-diamanteno-probivane-ceni-2026): price per hole by diameter, the €100 minimum per visit and what is not included
+  - [Drilling reinforced concrete](https://drillingholes.com/blog/probivane-stomanobeton): why percussion drilling cracks reinforced concrete, how diamond core drilling works, load-bearing walls
+  - [Diamond vs percussion drilling](https://drillingholes.com/blog/diamanteno-vs-udarno-probivane): comparison of cost, noise, dust and precision, and when each one is enough
+  - [Recuperator against damp and mould](https://drillingholes.com/blog/rekuperator-sreshtu-vlaga-i-muhal): how a single-room heat recovery unit works and when it fixes damp and mould
 - [NIRA](https://nira-air.com): the owner's sister brand that sells Reventon Waller single-room recuperators, with prices, delivery across Bulgaria and installation in Varna. Buyers of a unit there pay from 120 € instead of from 150 € for drilling and installation
 
 ## Services offered
